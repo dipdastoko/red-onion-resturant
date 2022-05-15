@@ -4,41 +4,41 @@
         "price": 3,
         "img": "https://i.ibb.co/XykN8wx/breakfast1.png",
         "id": 1,
-        "details": ""
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem numquam minus natus mollitia ratione ea hic sapiente. Sunt eos distinctio blanditiis, consequuntur minus quis reprehenderit modi explicabo accusantium? Deserunt non sequi corrupti necessitatibus numquam sed voluptate ullam sit et."
     },
     {
         "name": "breakfast2",
         "price": 3,
         "img": "https://i.ibb.co/TPstrDH/breakfast2.png",
         "id": 2,
-        "details": ""
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem numquam minus natus mollitia ratione ea hic sapiente. Sunt eos distinctio blanditiis, consequuntur minus quis reprehenderit modi explicabo accusantium? Deserunt non sequi corrupti necessitatibus numquam sed voluptate ullam sit et."
     },
     {
         "name": "breakfast3",
         "price": 3,
         "img": "https://i.ibb.co/ZcprdVL/breakfast3.png",
         "id": 3,
-        "details": ""
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem numquam minus natus mollitia ratione ea hic sapiente. Sunt eos distinctio blanditiis, consequuntur minus quis reprehenderit modi explicabo accusantium? Deserunt non sequi corrupti necessitatibus numquam sed voluptate ullam sit et."
     },
     {
         "name": "breakfast4",
         "price": 3,
         "img": "https://i.ibb.co/r4wvGcb/breakfast4.png",
         "id": 4,
-        "details": ""
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem numquam minus natus mollitia ratione ea hic sapiente. Sunt eos distinctio blanditiis, consequuntur minus quis reprehenderit modi explicabo accusantium? Deserunt non sequi corrupti necessitatibus numquam sed voluptate ullam sit et."
     },
     {
         "name": "breakfast5",
         "price": 3,
         "img": "https://i.ibb.co/xL0bzhg/breakfast5.png",
         "id": 5,
-        "details": ""
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem numquam minus natus mollitia ratione ea hic sapiente. Sunt eos distinctio blanditiis, consequuntur minus quis reprehenderit modi explicabo accusantium? Deserunt non sequi corrupti necessitatibus numquam sed voluptate ullam sit et."
     },
     {
         "name": "breakfast6",
         "price": 3,
         "img": "https://i.ibb.co/3rpYnK3/breakfast6.png",
         "id": 6,
-        "details": ""
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem numquam minus natus mollitia ratione ea hic sapiente. Sunt eos distinctio blanditiis, consequuntur minus quis reprehenderit modi explicabo accusantium? Deserunt non sequi corrupti necessitatibus numquam sed voluptate ullam sit et."
     }
 ]

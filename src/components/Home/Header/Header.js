@@ -3,8 +3,13 @@ import './Header.css';
 import logo from '../../../images/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
+    const navigate = useNavigate();
+    const handleSignUp = () => {
+        navigate('/signup');
+    }
     return (
         <>
             <div className='ms-5 mt-3'>
@@ -12,8 +17,8 @@ const Header = () => {
             </div>
             <div className='d-flex float-end me-5'>
                 <h3><FontAwesomeIcon icon={faCartArrowDown} /></h3>
-                <a href="sf" className='mx-4'>Login</a>
-                <button type="button" className="btn btn-success rounded-pill">Sign Up</button>
+                <Link className='mx-4' to='/login'>Login</Link>
+                <button onClick={handleSignUp} type="button" className="btn btn-success rounded-pill">Sign Up</button>
             </div>
             <br />
             <br />

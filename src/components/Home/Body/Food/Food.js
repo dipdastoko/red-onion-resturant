@@ -1,10 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Food.css';
 
 const Food = props => {
-    const { img, price, name } = props.food;
+    const { img, price, name, id } = props.food;
+    const history = useNavigate();
+    const handleButtonClick = () => {
+        history(`/details/${id}`);
+    }
     return (
-        <div className="card m-4" style={{ width: "18rem" }}>
+        <div className="card m-4 food" onClick={handleButtonClick} style={{ width: "18rem" }}>
             <h3>{name}</h3>
             <img src={img} className="card-img-top" alt="..." />
             <div className="card-body">

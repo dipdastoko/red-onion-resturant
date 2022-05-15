@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import useFoods from '../../../Hooks/useFoods';
 import Food from '../Food/Food';
+import './Foods.css';
 
 const Foods = () => {
-    const [foods, setFoods] = useState([]);
-    useEffect(() => {
-        fetch('./fakedata.json')
-            .then(res => res.json())
-            .then(data => setFoods(data))
-    }, []);
+    const foods = useFoods();
     return (
-        <div className='food'>
+        <div className='foods'>
             {
                 foods.map(food => <Food food={food} key={food.id}></Food>)
             }
