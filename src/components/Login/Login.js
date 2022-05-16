@@ -15,6 +15,7 @@ const Login = () => {
                 <input type="password" class="form-control" id="exampleInputPassword1" />
             </div>
             <button type="button" className="btn btn-primary rounded-pill px-4 py-2 mt-3">Login</button>
+
         </div>
     );
 };

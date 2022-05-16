@@ -5,6 +5,7 @@ import FoodDetails from './components/FoodDetails/FoodDetails';
 import AuthProvider from './components/Context/AuthProvider';
 import Login from './components/Login/Login';
 import SignUp from './components/Login/SignUp';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
@@ -12,10 +13,12 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/details/:foodId' element={<FoodDetails></FoodDetails>}></Route>
-            <Route path='/login' element={<Login></Login>}></Route>
-            <Route path='/signup' element={<SignUp />} />
+            <Route index element={<Home></Home>}></Route>
+            <Route path='home' element={<Home></Home>}></Route>
+            <Route path='details/:foodId' element={<FoodDetails></FoodDetails>}></Route>
+            <Route path='login' element={<Login></Login>}></Route>
+            <Route path='signup' element={<SignUp />} />
+            <Route path='cart' element={<Cart></Cart>}></Route>
           </Routes>
         </BrowserRouter>
       </AuthProvider>

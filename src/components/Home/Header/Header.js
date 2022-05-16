@@ -16,7 +16,7 @@ const Header = () => {
                 <img className='logo' src={logo} alt="" />
             </div>
             <div className='d-flex float-end me-5'>
-                <h3><FontAwesomeIcon icon={faCartArrowDown} /></h3>
+                <Link to='cart'><h3><FontAwesomeIcon icon={faCartArrowDown} /></h3></Link>
                 <Link className='mx-4' to='/login'>Login</Link>
                 <button onClick={handleSignUp} type="button" className="btn btn-success rounded-pill">Sign Up</button>
             </div>
