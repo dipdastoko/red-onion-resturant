@@ -4,12 +4,14 @@ import logo from '../../../images/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 
 const Header = () => {
     const navigate = useNavigate();
     const handleSignUp = () => {
         navigate('/signup');
     }
+    const { user, logOut } = useFirebase();
     return (
         <>
             <div className='ms-5 mt-3'>
@@ -31,6 +33,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            {user?.email && <button onClick={logOut}>LogOut</button>}
         </>
     );
 };
