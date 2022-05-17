@@ -6,6 +6,7 @@ import AuthProvider from './components/Context/AuthProvider';
 import Login from './components/Login/Login';
 import SignUp from './components/Login/SignUp';
 import Cart from './components/Cart/Cart';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route path='details/:foodId' element={<FoodDetails></FoodDetails>}></Route>
             <Route path='login' element={<Login></Login>}></Route>
             <Route path='signup' element={<SignUp />} />
-            <Route path='cart' element={<Cart></Cart>}></Route>
+            <Route path='cart' element={<PrivateRoute><Cart></Cart></PrivateRoute>}></Route>
           </Routes>
         </BrowserRouter>
       </AuthProvider>

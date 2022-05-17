@@ -34,7 +34,6 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
-                console.log(user);
             })
     }
     useEffect(() => {

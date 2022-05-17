@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useFirebase from '../Hooks/useFirebase';
 import './Login.css';
 
@@ -8,6 +9,7 @@ const Login = () => {
     const { signInUsingEmailPassword } = useFirebase();
     return (
         <div className='login'>
+            <Link to='/'>Home</Link>
             <h2>Login</h2>
             <br />
             <div className="mb-3">
