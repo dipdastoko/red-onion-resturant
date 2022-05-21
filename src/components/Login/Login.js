@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
 import useFirebase from '../Hooks/useFirebase';
 import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { signInUsingEmailPassword } = useFirebase();
+    const { auths } = useAuth();
+    const { signInUsingEmailPassword, user } = auths;
 
     const location = useLocation();
     const navigate = useNavigate();
-    const redirect_url = location.state?.from;
+    const redirect_url = location.state?.from.pathname || '/';
+
+    const handleLoginButton = () => {
+        if (email && password) {
+            signInUsingEmailPassword(email, password);
+            navigate(redirect_url);
+        }
+    }
 
     return (
         <div className='login'>
@@ -29,15 +38,7 @@ const Login = () => {
                     setPassword(event.target.value)
                 }} type="password" className="form-control" id="exampleInputPassword1" />
             </div>
-            <button onClick={() => {
-                if (email && password) {
-                    signInUsingEmailPassword(email, password);
-                    if (redirect_url) { navigate(redirect_url.pathname); }
-                    else {
-                        navigate('/');
-                    }
-                }
-            }} type="button" className="btn btn-primary rounded-pill px-4 py-2 mt-3">Login</button>
+            <button onClick={handleLoginButton} type="button" className="btn btn-primary rounded-pill px-4 py-2 mt-3">Login</button>
 
         </div>
     );

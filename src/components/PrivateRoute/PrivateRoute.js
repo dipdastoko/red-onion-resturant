@@ -1,13 +1,20 @@
-import { render } from 'react-dom';
-import { Navigate, Route, useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
 const PrivateRoute = ({ children }) => {
     const { auths } = useAuth();
     const location = useLocation();
-    console.log(location);
+
+    const { user } = auths;
+
+    if (auths.isLoading) {
+
+        return <div className="spinner-border text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
+        </div>
+    }
     return (
-        auths?.user?.email ? children : <Navigate replace to='/login' state={{ from: location }}></Navigate>
+        user?.email ? children : <Navigate replace to='/login' state={{ from: location }}></Navigate>
     );
 
 };
