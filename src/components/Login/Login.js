@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
-import useFirebase from '../Hooks/useFirebase';
 import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { auths } = useAuth();
-    const { signInUsingEmailPassword, user } = auths;
+    const { signInUsingEmailPassword } = auths;
 
     const location = useLocation();
     const navigate = useNavigate();
